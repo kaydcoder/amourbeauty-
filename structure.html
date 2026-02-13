@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Amour Beauty Studio</title>
+</head>
+
+
+
+<body>
+
+<header>
+    <h1>Amour Beauty Studio</h1>
+</header>
+
+<section class="gallery">
+    <img src="sis_love_msg1.jpeg" alt="Beauty work">
+    <img src="sis_love_msg5.jpeg" alt="Beauty work">
+    <img src="sis_love_msg3.jpeg" alt="Beauty work">
+    <img src="sis_love_msg4.jpeg" alt="Beauty work">
+</section>
+<button id="openFormBtn">Send Us a Message</button>
+
+<div id="messageForm" class="form-container">
+   <form
+  action="https://formspree.io/f/xeelanvj"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
+</div>
+
+
+<section class="content">
+    <h2>Our Services</h2>
+    <ul>
+        <li>✔ Bridal Makeup</li>
+        <li>✔ Full Glam</li>
+        <li>✔ Photoshoot Makeup</li>
+        <li>✔ Soft / Everyday Glam</li>
+    </ul>
+
+    <h3>Contact Us</h3>
+    <p><strong>Phone:</strong> +233 202 789 680</p>
+    <p><strong>Location:</strong> Agbogba Cemetery Junction, Accra Ghana</p>
+</section>
+
+
+<footer>
+    <p>Follow us on Instagram | TikTok | Snapchat</p>
+</footer>
+<script>
+const btn = document.getElementById("openFormBtn");
+const form = document.getElementById("messageForm");
+
+btn.addEventListener("click", function() {
+    if (form.style.display === "none" || form.style.display === "") {
+        form.style.display = "block";
+    } else {
+        form.style.display = "none";
+    }
+});
+</script>
+
+</body>
+</html>

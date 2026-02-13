@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #FFF8F5;
+    color: #444;
+}
+
+/* HEADER */
+header {
+    background-color: #4A2C40;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #F8D7E3;
+    margin: 0;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+/* HERO IMAGE */
+
+/* GALLERY SECTION */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.gallery img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* CONTENT SECTION */
+.content {
+    background-color: #F8D7E3;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.content h2 {
+    color: #4A2C40;
+    margin-bottom: 20px;
+}
+
+.content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content ul li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #4A2C40;
+    color: #F8D7E3;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+#openFormBtn {
+    background-color: #B76E79;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.form-container {
+    display: none;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.form-container button {
+    background-color: #4A2C40;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}

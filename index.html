@@ -5,9 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
 <title>Amour Beauty Studio</title>
+
+<style>
+/* Hide form by default */
+.form-container {
+    display: none;
+    margin-top: 20px;
+}
+</style>
+
 </head>
-
-
 
 <body>
 
@@ -21,26 +28,27 @@
     <img src="sis_love_msg3.jpeg" alt="Beauty work">
     <img src="sis_love_msg4.jpeg" alt="Beauty work">
 </section>
+
 <button id="openFormBtn">Send Us a Message</button>
 
 <div id="messageForm" class="form-container">
    <form
-  action="https://formspree.io/f/xeelanvj"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
+      action="https://formspree.io/f/xeelanvj"
+      method="POST"
+   >
+      <label>
+        Your email:
+        <input type="email" name="email" required>
+      </label>
+      <br><br>
+      <label>
+        Your message:
+        <textarea name="message" required></textarea>
+      </label>
+      <br><br>
+      <button type="submit">Send</button>
+   </form>
 </div>
-
 
 <section class="content">
     <h2>Our Services</h2>
@@ -56,19 +64,32 @@
     <p><strong>Location:</strong> Agbogba Cemetery Junction, Accra Ghana</p>
 </section>
 
-
 <footer>
     <p>Follow us on Instagram | TikTok | Snapchat</p>
 </footer>
+
 <script>
+// Toggle form open/close
 const btn = document.getElementById("openFormBtn");
-const form = document.getElementById("messageForm");
+const formContainer = document.getElementById("messageForm");
 
 btn.addEventListener("click", function() {
-    if (form.style.display === "none" || form.style.display === "") {
-        form.style.display = "block";
+    if (formContainer.style.display === "none" || formContainer.style.display === "") {
+        formContainer.style.display = "block";
     } else {
-        form.style.display = "none";
+        formContainer.style.display = "none";
+    }
+});
+
+// Reset form on page load
+window.onload = function() {
+    document.querySelector("form").reset();
+};
+
+// Reload page if coming from browser cache (back button)
+window.addEventListener("pageshow", function(event) {
+    if (event.persisted) {
+        window.location.reload();
     }
 });
 </script>
